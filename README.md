@@ -16,6 +16,5 @@ Enjoy using it as a base for something.
 ### 3rd party libaries(All included)
 - [Dear ImGui](https://github.com/ocornut/imgui)
 - [GLFW](https://github.com/glfw/glfw)
-- [stb_image](https://github.com/nothings/stb)
 - [GLM](https://github.com/g-truc/glm)
 
