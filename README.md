@@ -9,6 +9,10 @@ Enjoy using it as a base for something.
 
 ----
 
+## Getting Started
+Once you've cloned, run `scripts/Setup.bat` to generate Visual Studio 2022 solution/project files. Your app is located in the `imgui-login/` directory.
+
+
 ## Requirements
 - [Visual Studio 2022](https://visualstudio.com)
 - [Vulkan SDK](https://vulkan.lunarg.com/sdk/home#windows) (preferably a recent version)
