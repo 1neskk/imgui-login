@@ -2,37 +2,33 @@
 #include "Walnut/EntryPoint.h"
 
 #include "Walnut/Image.h"
+#include "Theme.h"
+
 
 class ExampleLayer : public Walnut::Layer
 {
 public:
 	virtual void OnUIRender() override
 	{
-		ImGui::Begin("Hello");
-		ImGui::Button("Button");
-		ImGui::End();
-
-		ImGui::ShowDemoWindow();
+		theme.Init();
+		if (theme.InfWindow)
+		{
+			theme.InfLog();
+		}
+		
+		//ImGui::ShowDemoWindow();
 	}
+
+private:
+	Theme theme;
 };
 
 Walnut::Application* Walnut::CreateApplication(int argc, char** argv)
 {
 	Walnut::ApplicationSpecification spec;
-	spec.Name = "Walnut Example";
+	spec.Name = "Login";
 
 	Walnut::Application* app = new Walnut::Application(spec);
 	app->PushLayer<ExampleLayer>();
-	app->SetMenubarCallback([app]()
-	{
-		if (ImGui::BeginMenu("File"))
-		{
-			if (ImGui::MenuItem("Exit"))
-			{
-				app->Close();
-			}
-			ImGui::EndMenu();
-		}
-	});
 	return app;
 }

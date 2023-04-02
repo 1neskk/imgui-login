@@ -1,10 +1,10 @@
 -- premake5.lua
-workspace "WalnutApp"
+workspace "imgui-login"
    architecture "x64"
    configurations { "Debug", "Release", "Dist" }
-   startproject "WalnutApp"
+   startproject "imgui-login"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 include "Walnut/WalnutExternal.lua"
 
-include "WalnutApp"
+include "imgui-login"

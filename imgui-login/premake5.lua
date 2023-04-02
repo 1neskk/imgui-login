@@ -1,4 +1,4 @@
-project "WalnutApp"
+project "imgui-login"
    kind "ConsoleApp"
    language "C++"
    cppdialect "C++17"
