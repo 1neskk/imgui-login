@@ -4,44 +4,47 @@
 void Theme::Init()
 {
 	Theme::Style();
-	ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[3]);
+	//To use your own font, replace the default font in "Application.cpp."
+	// (imgui-login\Walnut\Walnut\src\Walnut\Application.cpp)
+
+	//ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[3]);
 	ImGui::Begin("Login", &loader_active, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoCollapse);
 	{
-			ImGui::PopFont();
-			ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
+			//ImGui::PopFont();
+			//ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
 			ImGui::Text("Username: ");
 			ImGui::Spacing();
 			ImGui::InputText("##username", Username, 20);
 			ImGui::Text("Password: ");
 			ImGui::Spacing();
 			ImGui::InputText("##password", Password, 20, ImGuiInputTextFlags_Password);
-			ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[3]);
+			//ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[3]);
 			if (ImGui::Button("Login", ImVec2(ImGui::GetWindowWidth() - 20, 0)))
 			{
 					InfWindow = true;
 					MessageBox(NULL, TEXT("Login Successful!"), TEXT("Login"), MB_OK);
 			}
 		}
-	ImGui::PopFont();
-	ImGui::PopFont();
+	//ImGui::PopFont();
+	//ImGui::PopFont();
 	ImGui::End();
 	}
 
 void Theme::InfLog()
 {
-	ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[3]);
+	//ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[3]);
 	ImGui::Begin("Welcome!", &loader_active, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoScrollbar);
 	{
 
 		ImGui::Columns(1, NULL, true);
 		{
-			ImGui::PopFont();
-			ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
+			//ImGui::PopFont();
+			//ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
 
 			ImGui::Text("Welcome to your app!");
 		}
 	}
-	ImGui::PopFont();
+	//ImGui::PopFont();
 	ImGui::End();
 }
 
