@@ -1,3 +1,4 @@
+#include <Windows.h>
 #include "Theme.h"
 
 void Theme::Init()
@@ -17,16 +18,8 @@ void Theme::Init()
 			ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[3]);
 			if (ImGui::Button("Login", ImVec2(ImGui::GetWindowWidth() - 20, 0)))
 			{
-				if (Username == "nesk" && Password == "root")
-				{
 					InfWindow = true;
-					loader_active = false;
-				}
-				else
-				{
-					InfWindow = false;
-					loader_active = false;
-				}
+					MessageBox(NULL, TEXT("Login Successful!"), TEXT("Login"), MB_OK);
 			}
 		}
 	ImGui::PopFont();
@@ -46,11 +39,11 @@ void Theme::InfLog()
 			ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
 
 			ImGui::Text("Welcome to your app!");
-			}
 		}
+	}
 	ImGui::PopFont();
 	ImGui::End();
-	}
+}
 
 void Theme::Style()
 {

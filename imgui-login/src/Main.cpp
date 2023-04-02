@@ -11,11 +11,9 @@ public:
 	virtual void OnUIRender() override
 	{
 		theme.Init();
-		if (theme.InfWindow)
-		{
+		if(theme.InfWindow)
 			theme.InfLog();
-		}
-		
+	
 		//ImGui::ShowDemoWindow();
 	}
 

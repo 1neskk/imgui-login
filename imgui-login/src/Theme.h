@@ -15,10 +15,6 @@ public:
 	bool InfWindow = false;
 
 private:
-	/*float windowWidth = ImGui::GetContentRegionAvail().x;
-	float buttonWidth = 200;
-	float padding = (windowWidth - buttonWidth) * 0.5f;*/
-
 	bool loader_active = true;
 	bool LoginCheck = false;
 };
