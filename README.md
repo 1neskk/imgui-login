@@ -10,7 +10,7 @@ Enjoy using it as a base for something.
 ----
 
 ## Getting Started
-Once you've cloned, run `scripts/Setup.bat` to generate Visual Studio 2022 solution/project files. Your app is located in the `imgui-login/` directory.
+Once you've cloned, run `scripts/Setup.bat` to generate Visual Studio 2022 solution/project files. The app is located in the `imgui-login/` directory.
 
 
 ## Requirements
